@@ -8,6 +8,9 @@ function Fibonacci(numero)
     }
 }
 
+
+//Lo de leer txt en node.js lo saque de aqui: https://nodejs.dev/learn/reading-files-with-nodejs
+//si quieres cambiar el numero tienes que cambiarlo desde el archivo numeros.txt :)
 const fs = require('fs');
 
 fs.readFile('numeros.txt', 'utf8', (err, data) => {
@@ -17,6 +20,3 @@ fs.readFile('numeros.txt', 'utf8', (err, data) => {
   }
   console.log("Fibonacci(", data ,")", "=", Fibonacci(data));
 });
-
-//console.log(Fibonacci(10))
-
